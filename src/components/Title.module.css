@@ -1,0 +1,65 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+}
+
+.title {
+  width: 100%;
+  margin: 0 auto 30px;
+  padding: 20px 30px;
+  font-weight: 1000;
+  color: white;
+  position: sticky;
+  top: 0;
+  background-color: #2a3251;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+}
+
+.option {
+  padding: 0 20px;
+}
+
+.option:hover {
+  color: rgba(179, 222, 254, 0.911);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  height: 40.9px;
+  width: 54.53px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+input,
+button {
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+  height: 28px;
+  font-size: 15px;
+}
+
+button {
+  background-color: rgba(205, 243, 255, 0.692);
+}
+
+button:hover {
+  background-color: rgba(227, 227, 227, 0.5);
+  color: white;
+}
