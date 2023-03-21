@@ -26,10 +26,6 @@ function Title({}) {
         <a href="https://www.lottecinema.co.kr/" className={styles.option}>
           롯데시네마
         </a>
-        <div className={styles.option}>
-          <input placeholder="Search Movie"></input>
-          <button>검색</button>
-        </div>
       </div>
     </div>
   );
