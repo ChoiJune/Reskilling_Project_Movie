@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./Movie.module.css";
 
@@ -23,7 +22,9 @@ function Movie({
           <Link to={`/movie/${id}`}>{title}</Link>
         </h2>
         <h3 className={styles.movie__date}>{releaseDate}</h3>
-        <p>{overview}</p>
+        <p>
+          {overview.length > 160 ? `${overview.slice(0, 160)} ...` : overview}
+        </p>
         <p className={styles.movie__vote}>평점 : {voteAverage}</p>
         <p className={styles.movie__vote}>추천수 : {voteCount}</p>
       </div>

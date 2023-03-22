@@ -4,7 +4,7 @@ import logo from "../images/logo.png";
 function Title({}) {
   return (
     <div className={styles.title}>
-      <a href="#">
+      <a href="/">
         <div className={styles.logo}>
           <img src={logo} alt="LG로고" className={styles.image}></img>
           <header>Reskilling Movie</header>
