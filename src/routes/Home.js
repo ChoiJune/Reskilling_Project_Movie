@@ -5,7 +5,7 @@ import styles from "./Home.module.css";
 
 function Home() {
   const [loading, setLoading] = useState(true);
-  const [order, setOrder] = useState("");
+  const [order, setOrder] = useState("release_date");
   const [page, setPage] = useState(1);
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState("");
@@ -54,7 +54,7 @@ function Home() {
       setSearch("");
       setItems([]);
       setPage(1);
-      handleLoad({ order, page: 1, search: "" }); // 검색어가 없는 경우 빈 문자열 전달
+      handleLoad({ order, page: 1, search: "" });
     }
   };
 
@@ -77,9 +77,15 @@ function Home() {
               추천순
             </a>
           </div>
-          <form onSubmit={handleSearchSubmit} className={styles.option}>
-            <input name="search" placeholder="Search Movie" />
-            <button type="submit">검색</button>
+          <form onSubmit={handleSearchSubmit}>
+            <input
+              name="search"
+              placeholder="Search Movie"
+              className={styles.searchbar}
+            />
+            <button type="submit" className={styles.searchbutton}>
+              검색
+            </button>
           </form>
         </div>
       </div>
