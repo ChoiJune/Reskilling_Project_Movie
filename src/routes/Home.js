@@ -102,7 +102,7 @@ function Home() {
                 id={result.id}
                 key={result.id}
                 overview={result.overview}
-                backdropPath={result.backdrop_path}
+                poster_path={result.poster_path}
                 title={result.title}
                 voteAverage={result.vote_average}
                 releaseDate={result.release_date}

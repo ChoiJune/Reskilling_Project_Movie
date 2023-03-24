@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./Movie.module.css";
-import { getMovieImages } from "../ImgApi";
-import { useEffect, useState } from "react";
 import best from "../images/best.png";
 
 function Movie({
-  backdropPath,
+  poster_path,
   title,
   id,
   overview,
@@ -15,19 +13,10 @@ function Movie({
 }) {
   const imgURL = "https://image.tmdb.org/t/p/original/";
 
-  const [posterPath, setPosterPath] = useState("");
-  useEffect(() => {
-    async function fetchData() {
-      const path = await getMovieImages(id);
-      setPosterPath(path);
-    }
-    fetchData();
-  }, [id]);
-
   return (
     <div className={styles.movie}>
       <img
-        src={posterPath !== "" ? posterPath : `${imgURL}${backdropPath}`}
+        src={`${imgURL}${poster_path}`}
         alt={title}
         className={styles.movie__img}
       />

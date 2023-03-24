@@ -7,6 +7,6 @@ export async function getMovieImages(movieId) {
   );
 
   const result = await response.json();
-  const posterPath = result.posters[0].file_path;
+  const posterPath = result.posters[0]?.file_path || "";
   return `${imgURL}${posterPath}`;
 }
