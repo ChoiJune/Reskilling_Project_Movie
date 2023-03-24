@@ -30,11 +30,15 @@ function Movie({
         </p>
         {Number(voteAverage) >= 8 ? (
           <div className={styles.best}>
-            <p className={styles.movie__best}>평점 : {voteAverage}</p>
+            <p className={styles.movie__best}>
+              평점 : {Number(voteAverage).toFixed(2)}
+            </p>
             <img src={best} alt="Best" className={styles.bestlogo} />
           </div>
         ) : (
-          <p className={styles.movie__vote}>평점 : {voteAverage}</p>
+          <p className={styles.movie__vote}>
+            평점 : {Number(voteAverage).toFixed(2)}
+          </p>
         )}
         <p className={styles.movie__vote}>추천수 : {voteCount}</p>
       </div>
